@@ -3,14 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>home</title>
 </head>
 <body>
-    
+    <%- include("../partials/navbar.ejs") %>
+
+    <!-- ===================================HERO SECTION STARTS============================================= -->
+  <div class="container-fluid " style="background-color: #EFFAFF;">
+    <div class="row d-flex flex-row-reverse">
+      <div class="col-sm-12 col-xl-5">
+        <img src="./assets/hero section image.png" height="400" alt="student learnving online image">
+      </div>
+      <div class="col-sm-12 col-xl-7 d-flex flex-column justify-content-center">
+        <h1>Your Smart Companion for Exam Preparation</h1>
+        <p>Simplify your exam preparation with organized notes, practice questions, and progress tracking. Study
+          efficiently and stay focused with a centralized learning platform designed for students.</p>
+        <!-- buttons -->
+        <div class="d-grid gap-5 d-md-flex justify-content-md-start">
+          <a href="/pages/signin page/login.html"><button type="button" class="btn btn-primary me-md-5">Start Learning
+            </button></a>
+          <a href="/pages/subject page/subject.html"><button type="button" class="btn btn-primary">view resources
+            </button> </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- ===================================HERO SECTION ENDS============================================= -->
+<!-- =================================================FEATURES SECTION STARTS====================================================== -->
+  <div class="container-fluid mt-5 mb-5">
+    <div class="row row-cols-3 d-flex justify-content-evenly pt-5 pb-5 gap-4 ">
+    <%
+ const featuresdetails = [{image: "./assets/note feature card image.png", alternative: "notes card image"  , card_title: "Structured Study Notes" ,card_text: "Access detailed notes, quick revision sheets, and simplified learning content designed to help students understand concepts clearly and prepare subjects in a more organized way."},
+    {image: "./assets/preparation material feature card image.png" ,alternative: "preparation materials image" ,card_title: "Exam Preparation Materials" ,card_text: "Prepare effectively with model papers, previous year questions, important resources, and recommended video lectures designed according to university examination patterns."},
+    {image: "./assets/community feature card image.png" ,alternative: "community feature image" ,card_title: "Student Learning Community" ,card_text: "Connect with students, discuss doubts, share useful resources, and support collaborative learning through an active community focused on academic preparation."}
+];
+%>
+
+<% featuresdetails.forEach(feature => {  %>
+       <div class="card" style="background-color: #EFFAFF; width: 20rem;">
+  <img src="<%=  feature.image %>"  height="150" width="100%" alt="<%= feature.alternative %>">
+        <div class="card-body">
+          <h4 class="card-title"><%= feature.card_title %></h4>
+          <p class="card-text"> <%= feature.card_text %> </p>
+</div>
+</div>
+<% }); %>
+    </div>
+  </div>
+<!-- =================================================FEATURES SECTION ENDS====================================================== -->
+<!-- ===================================================AVAILABLE SUBJECTS SECTION STARTS====================================================================================== -->
+  <div class="container-fluid " style="background-color: #EFFAFF;">
+    <div class="row">
+      <div class="col-12 d-flex gap-2">
+        <div>
+          <img src="./assets/book.svg" alt="book icon" class="bg-primary-subtle border border-primary-subtle rounded-3">
+        </div>
+        <div>
+          <h2>Available Subjects</h2>
+          <p>Explore all subjects and access well-organized study materials to support your exam preparation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid mt-2 mb-5">
+    <div class="row d-flex flex-wrap">
+        <% const available_subjects = [
+            {subject:"Digital Electronics"},
+            {subject:"Computer Networks"},
+            {subject: "DBMS"},
+            {subject:"Object Orineted Programming"},
+            {subject:"Operating System"}
+        ]; %>
+        <% available_subjects.forEach(subjects => { %>
+            <div style="background-color: #EFFAFF; width: 12rem;" class="rounded text-center m-2"><%= subjects.subject %></div>
+       <% }); %>
+    </div>
+    <a href="/pages/subject page/subject.html" class="row d-flex justify-content-center">
+      <button type="button" class="btn btn-primary me-md-5 align-items-center" style="width: 12rem;">View All Resources
+      </button>
+    </a>
+  </div>
+<!-- ===================================================AVAILABLE SUBJECTS SECTION ENDS====================================================================================== -->
 
 
+<%- include("../partials/footer.ejs") %>
+  <script src="nav.js"></script>
     <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
 </body>
 </html>
