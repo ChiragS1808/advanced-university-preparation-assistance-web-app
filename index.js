@@ -13,6 +13,6 @@ app.get("/",(req,res)=>{
     res.render("home/index.ejs");
 });
 
-app.get("/community/community.ejs",(req,res)=>{
+app.get("/community",(req,res)=>{
     res.render("community/community.ejs");
 });
