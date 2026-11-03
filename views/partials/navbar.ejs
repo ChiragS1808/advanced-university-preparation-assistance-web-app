@@ -1,0 +1,41 @@
+  <!-- navbar starting -->
+  <nav class="navbar navbar-expand-lg " style="background-color: #EFFAFF;">
+    <div class="container-fluid">
+      <!-- logo -->
+      <a class="navbar-brand" href="/">
+        <img src="/assets/logo.png" height="50" alt="exam mate logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/subject">Subjects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/community">Community</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact us page">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <div class="dropdown" id="userDropdown" style="display:none;">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" id="userNav">User</a>
+              <ul class="dropdown-menu">
+                <li> <a class="dropdown-item text-danger" href="/login" id="logoutBtn">Logout</a>
+                </li>
+
+              </ul>
+            </div>
+            <a class="nav-link" id="loginNav" href="signin page/login.ejs">Register/sign in</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar ending -->
