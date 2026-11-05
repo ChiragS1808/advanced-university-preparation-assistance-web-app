@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet"  href="/bootstrap/css/bootstrap.min.css">
+
+    <title>community</title>
+</head>
+<body>
+ <%- include("../partials/navbar.ejs") %>
+<!-- ============================PAGE HEADING============================= -->
+  <!-- page heading -->
+  <div class="mt-2 text-center" style="background-color: #EFFAFF;">
+    <h1>Community</h1>
+    <hr>
+  </div>
+<!-- ============================PAGE HEADING ENDS============================= -->
+<!-- ======================================MAKE POST BUTTON====================================== -->
+   <div class="d-grid gap-2">
+    <button class="btn btn-primary fs-3" data-bs-toggle="modal" data-bs-target="#uploadmodal">
+      +
+    </button>
+  </div>
+<!-- ======================================MAKE POST BUTTON ENDS====================================== -->
+<!-- =================================================POP UP FORM ===================================================== -->
+ <section class="modal fade" id="uploadmodal">
+<h1>chala </h1>
+ </section>
+<!-- =================================================POP UP FORM ENDS===================================================== -->
+
+ <%- include("../partials/footer.ejs") %>
+
+
+
+<script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="community statics/community.js"></script>
+  <script src="nav.js"></script>
+</body>
+</html>
